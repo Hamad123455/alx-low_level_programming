@@ -4,7 +4,7 @@
  * print_sign - prints the sign of the given number +/-
  * @n: Number to be tested
  *
- * Retuen: 1 if positive and greater than zero, 0 if is zero, and -1 if neg.
+ * Return: 1 if positive and greater than zero, 0 if is zero, and -1 if neg.
  */
 int print_sign(int n)
 {
