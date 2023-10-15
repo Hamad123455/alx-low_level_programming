@@ -16,7 +16,7 @@ void times_table(void)
 		{
 			int sum = v * h;
 
-			_putchar('.');
+			_putchar(',');
 			if (sum / 100 == 0)
 			{
 				_putchar(32);
