@@ -53,11 +53,11 @@ while (j >= 0 || i >= 0 || overflow == 1)
 if (i < 0)
 va11 = 0;
 else
-va11 = *(n1 + i) - '0';
+va11 = *(n1 + i) -'0';
 if (j < 0)
 va12 = 0;
 else
-va12 = *(n2 + j) - '0';
+va12 = *(n2 + j) -'0';
 temp_tot = va11 + va12 + overflow;
 if (temp_tot >= 10)
 overflow = 1;
