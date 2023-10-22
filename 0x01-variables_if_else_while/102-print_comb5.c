@@ -6,26 +6,30 @@
 */
 int main(void)
 {
-int i, j;
+int i = 0, j;
 
-for (i = 0; i < 100; i++)
+while (i <= 99)
 {
-for (j = 0; j < 100; j++)
+j = i;
+while (j <= 99)
 {
-if (i < j)
+if (j != i)
 {
 putchar((i / 10) + 48);
 putchar((i % 10) + 48);
 putchar(' ');
 putchar((j / 10) + 48);
 putchar((j % 10) + 48);
+
 if (i != 98 || j != 99)
 {
 putchar(';');
 putchar(' ');
 }
 }
+j++;
 }
+i++;
 }
 putchar('\n');
 return (0);
