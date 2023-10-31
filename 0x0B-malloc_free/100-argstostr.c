@@ -4,9 +4,10 @@
 /**
 * argstostr - concatenate all program arguments
 * @ac: arguments count
-* @av: argument vector
+* @av: pointer to array of size ac
 *
-* Return: a pointer to the array of char
+* Return: NULL if ac == 0 or av == null; pointer to new string
+* NULL on fail
 */
 char *argstostr(int ac, char **av)
 {
@@ -40,10 +41,14 @@ j = 0;
 while (av[i][j])
 {
 arg[k] = av[i][j];
-i++;
+j++;
 k++;
+}
+arg[k] = '\n';
+k++;
+i++;
 }
 arg[k] = '\0';
 return (arg);
-}
+
 }
