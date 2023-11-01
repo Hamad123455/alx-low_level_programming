@@ -10,14 +10,14 @@
 
 int _atoi(char *s)
 {
-	int i, j, n, len, f, number;
+	int i, d, n, len, f, digit;
 
 	i = 0;
-	j = 0;
+	d = 0;
 	n = 0;
 	len = 0;
 	f = 0;
-	number = 0;
+	digit = 0;
 
 	while (s[len] != '0')
 		len++;
@@ -26,14 +26,14 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 
-			++j;
+			++d;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			number = s[i] - '0';
-			if (j % 2)
-				number = -number;
-			n = n * 10 + number;
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
 			f = 1;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
@@ -57,7 +57,7 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int sum, number, i, j, k;
+	int sum, num, i, j, k;
 
 	sum = 0;
 
@@ -75,10 +75,10 @@ int main(int argc, char *argv[])
 
 	for (k = 1; k < argc; k++)
 	{
-		number = _atoi(argv[k]);
-		if (number >= 0)
+		num = _atoi(argv[k]);
+		if (num >= 0)
 		{
-			sum += number;
+			sum += num;
 		}
 
 	}
