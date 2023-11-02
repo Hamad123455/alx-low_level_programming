@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 		carry = 0;
 		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
 		{
-			digit2 = s2[len] - '0';
+			digit2 = s2[len2] - '0';
 			carry += output[len1 + len2 + 1] + (digit1 * digit2);
 			output[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
 		if (output[i])
 			a = 1;
 		if (a)
-			_putchar('0');
+			_putchar(output[i] + '0');
 	}
 	if (!a)
 		_putchar('0');
@@ -97,4 +97,3 @@ int main(int argc, char *argv[])
 	free(output);
 	return (0);
 }
-
